@@ -1,5 +1,6 @@
 import 'package:c_coach/constants/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,14 +15,14 @@ class HomePage extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: deviceHeight / (deviceHeight > 700 ? 5 : 12),
+                    height: deviceHeight > 700 ? 158.h : 80.h,
                   ),
                   const Image(
                     image: AssetImage("assets/images/birds.png"),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 15.0),
-                    child: Image(
+                  Padding(
+                    padding: EdgeInsets.only(left: 15.0.w),
+                    child: const Image(
                       image: AssetImage("assets/images/reading-book.png"),
                     ),
                   ),
@@ -30,17 +31,16 @@ class HomePage extends StatelessWidget {
                       decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(deviceWidth / 9.825),
-                              topRight: Radius.circular(deviceWidth / 9.825))),
+                              topLeft: Radius.circular(40.sp),
+                              topRight: Radius.circular(40.sp))),
                       child: Padding(
-                        padding: EdgeInsets.all(deviceWidth / 19.65),
+                        padding: EdgeInsets.all(20.sp),
                         child: Column(
                           children: [
                             RichText(
                               text: TextSpan(
                                   style: GoogleFonts.lato(
-                                      color: Colors.black,
-                                      fontSize: deviceWidth / 9.825),
+                                      color: Colors.black, fontSize: 40.sp),
                                   children: const <TextSpan>[
                                     TextSpan(text: "Let's start "),
                                     TextSpan(
@@ -57,25 +57,25 @@ class HomePage extends StatelessWidget {
                                   ]),
                             ),
                             SizedBox(
-                              height: deviceHeight / 40.35,
+                              height: 20.h,
                             ),
                             const Text(
-                              "The complete App to start learning new skill and growing your skill.",
+                              "The complete App to start learning new skill and mastering the artistry.",
                               style: TextStyle(color: Colors.grey),
                             ),
                             SizedBox(
-                              height: deviceHeight / 27,
+                              height: 30.h,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                const Icon(Icons.more_horiz_sharp),
+                                const Icon(Icons.info_outline),
                                 Container(
-                                  width: deviceWidth / 1.97,
-                                  height: deviceHeight / 16.14,
+                                  width: 200.w,
+                                  height: 50.h,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(
-                                          deviceWidth / 21.83),
+                                      borderRadius:
+                                          BorderRadius.circular(18.sp),
                                       gradient: const LinearGradient(
                                         begin: Alignment.topRight,
                                         end: Alignment.bottomLeft,
