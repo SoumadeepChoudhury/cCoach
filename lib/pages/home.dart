@@ -76,14 +76,7 @@ class HomePage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                       borderRadius:
                                           BorderRadius.circular(18.sp),
-                                      gradient: const LinearGradient(
-                                        begin: Alignment.topRight,
-                                        end: Alignment.bottomLeft,
-                                        colors: [
-                                          backgroundColor,
-                                          textColor,
-                                        ],
-                                      )),
+                                      gradient: gradientColor),
                                   child: const Center(
                                     child: Text(
                                       "Get Started",
